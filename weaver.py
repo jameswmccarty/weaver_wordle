@@ -6,7 +6,7 @@
 start, end = "stop","sign"
 
 word_list = set()
-with open("enable1.txt","r") as infile:
+with open("weaver_dict.txt","r") as infile:
 	word_list = { line.strip() for line in infile.readlines() if len(line.strip()) == len(start) }
 lower_alpha = [ chr(_) for _ in range(97,97+26) ]
 
