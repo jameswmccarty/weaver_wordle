@@ -2,7 +2,7 @@
 
 # for https://wordwormdormdork.com/
 
-start, end = "wish","star"
+start, end = "stop","sign"
 
 word_list = set()
 with open("enable1.txt","r") as infile:
@@ -17,7 +17,9 @@ def diff_count_of_one(w1,w2):
 			count += 1
 		if count > 1:
 			return False
-	return True
+	if count == 1:
+		return True
+	return False
 
 # Return words that are valid and only differ by one character
 def next_poss_words(word):
